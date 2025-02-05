@@ -35,14 +35,14 @@ const Register = () => {
   ];
 
   const departments = [
-    'Computer Science',
-    'Information Technology',
-    'Electronics & Communication',
-    'Electrical Engineering',
-    'Mechanical Engineering',
-    'Civil Engineering',
-    'Chemical Engineering',
-    'Biotechnology'
+    'Computer Emgineering', // cp
+    'Information Technology', // IT
+    'Electronics & Communication', // EC
+    'Electrical Engineering', // EE
+    'Mechanical Engineering', // ME
+    'Civil Engineering', // CE
+    'Production Engineering', // PE
+    'Electronic Engineering', //El
   ];
 
   const years = ['1st Year', '2nd Year', '3rd Year', '4th Year'];
