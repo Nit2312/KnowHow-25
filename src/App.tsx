@@ -4,12 +4,16 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
-import MockInterviews from './pages/events/MockInterviews';
-import ResumeWorkshop from './pages/events/ResumeWorkshop';
-import IndustryTalks from './pages/events/IndustryTalks';
-import NetworkingSession from './pages/events/NetworkingSession';
+import MockInterviews from './pages/events/SafaltaSetu';
+import ResumeWorkshop from './pages/events/VikasPath';
+import IndustryTalks from './pages/events/SamjhautaKendra';
+import NetworkingSession from './pages/events/LoknitiShastra';
 import Results from './pages/Results';
 import Team from './pages/Team';
+import SafaltaSetu from './pages/events/SafaltaSetu';
+import VikasPath from './pages/events/VikasPath';
+import SamjhautaKendra from './pages/events/SamjhautaKendra';
+import LoknitiShastra from './pages/events/LoknitiShastra';
 
 function App() {
   return (
@@ -19,12 +23,11 @@ function App() {
         <main className="md:pl-64">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
-            <Route path="/events/mock-interviews" element={<MockInterviews />} />
-            <Route path="/events/resume-workshop" element={<ResumeWorkshop />} />
-            <Route path="/events/industry-talks" element={<IndustryTalks />} />
-            <Route path="/events/networking" element={<NetworkingSession />} />
+            <Route path="/events/SafaltaSetu" element={<SafaltaSetu />} />
+            <Route path="/events/VikasPath" element={<VikasPath />} />
+            <Route path="/events/SamjhautaKendra" element={<SamjhautaKendra />} />
+            <Route path="/events/LoknitiShastra" element={<LoknitiShastra/>} />
             <Route path="/results" element={<Results />} />
             <Route path="/team" element={<Team />} />
           </Routes>

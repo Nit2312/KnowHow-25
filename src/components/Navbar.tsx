@@ -7,10 +7,10 @@ const Navbar = () => {
   const [isEventsOpen, setIsEventsOpen] = useState(false);
 
   const events = [
-    { path: "/events/mock-interviews", name: "Safalta Setu" },
-    { path: "/events/resume-workshop", name: "Vikas Path" },
-    { path: "/events/industry-talks", name: "Samjhauta Kendra" },
-    { path: "/events/networking", name: "Lokniti Shastra" }
+    { path: "/events/SafaltaSetu", name: "Safalta Setu" },
+    { path: "/events/VikasPath", name: "Vikas Path" },
+    { path: "/events/SamjhautaKendra", name: "Samjhauta Kendra" },
+    { path: "/events/LoknitiShastra", name: "Lokniti Shastra" }
   ];
 
   return (
@@ -33,7 +33,7 @@ const Navbar = () => {
                 <div className="absolute -top-1 -right-1 w-4 h-4 bg-yellow-400 rounded-full animate-pulse" />
               </div>
               <div className="flex flex-col">
-                <span className="font-bold text-xl">WisdomPath</span>
+                <span className="font-bold text-xl">Pragyan</span>
                 <span className="text-xs text-indigo-200">Guiding Your Success</span>
               </div>
             </Link>
@@ -85,9 +85,6 @@ const Navbar = () => {
             </Link>
 
             <div className="pt-4 border-t border-indigo-500">
-              <Link to="/login" className="block bg-indigo-500 px-4 py-2 rounded-md hover:bg-indigo-400 transition-colors mb-2">
-                Login
-              </Link>
               <Link to="/register" className="block bg-white text-indigo-600 px-4 py-2 rounded-md hover:bg-indigo-100 transition-colors">
                 Register
               </Link>

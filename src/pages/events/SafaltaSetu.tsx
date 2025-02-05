@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { Calendar, Clock, Users } from 'lucide-react';
 
-const MockInterviews = () => {
+const SafaltaSetu = () => {
   const [activeRound, setActiveRound] = useState(1);
 
   const rounds = [
     {
       id: 1,
-      title: "Technical Round",
+      title: "Yukti Pariksha",
       date: "March 15, 2024",
       time: "10:00 AM - 12:00 PM",
       description: "Focus on data structures, algorithms, and problem-solving skills",
@@ -20,7 +20,7 @@ const MockInterviews = () => {
     },
     {
       id: 2,
-      title: "System Design Round",
+      title: "Vichar Samvad",
       date: "March 15, 2024",
       time: "1:00 PM - 2:30 PM",
       description: "Design scalable systems and discuss architectural decisions",
@@ -33,7 +33,20 @@ const MockInterviews = () => {
     },
     {
       id: 3,
-      title: "HR Round",
+      title: "Taknik Gyaan",
+      date: "March 15, 2024",
+      time: "3:00 PM - 4:00 PM",
+      description: "Behavioral questions and cultural fit assessment",
+      requirements: [
+        "Updated resume",
+        "Preparation for behavioral questions",
+        "Research about common HR practices",
+        "Professional attire"
+      ]
+    },
+    {
+      id: 4,
+      title: "Manav Moolya",
       date: "March 15, 2024",
       time: "3:00 PM - 4:00 PM",
       description: "Behavioral questions and cultural fit assessment",
@@ -49,7 +62,7 @@ const MockInterviews = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">Mock Interviews</h1>
+        <h1 className="text-4xl font-bold text-gray-900 mb-4">Safalta Setu</h1>
         <p className="text-xl text-gray-600">Practice makes perfect - Prepare for your dream job</p>
       </div>
 
@@ -118,4 +131,4 @@ const MockInterviews = () => {
   );
 };
 
-export default MockInterviews;
+export default SafaltaSetu;

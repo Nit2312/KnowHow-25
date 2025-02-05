@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { Calendar, Clock, Users, Star } from 'lucide-react';
 
-const IndustryTalks = () => {
+const SamjhautaKendra = () => {
   const [activeRound, setActiveRound] = useState(1);
 
   const rounds = [
     {
       id: 1,
-      title: "Tech Trends Panel",
+      title: "Nivesh Soch",
       date: "March 25, 2024",
       time: "1:00 PM - 2:30 PM",
       description: "Industry leaders discuss current and future tech trends",
@@ -28,7 +28,7 @@ const IndustryTalks = () => {
     },
     {
       id: 2,
-      title: "Career Growth Sessions",
+      title: "Kalam Ki Takat",
       date: "March 25, 2024",
       time: "3:00 PM - 4:30 PM",
       description: "Learn about career progression in tech",
@@ -49,7 +49,28 @@ const IndustryTalks = () => {
     },
     {
       id: 3,
-      title: "Innovation Showcase",
+      title: "Charchaa Chakra",
+      date: "March 25, 2024",
+      time: "5:00 PM - 6:00 PM",
+      description: "Demonstrations of cutting-edge technology",
+      speakers: [
+        {
+          name: "Alex Turner",
+          role: "CTO at Tesla",
+          topic: "Future of Electric Vehicles",
+          image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&q=80"
+        },
+        {
+          name: "Lisa Wang",
+          role: "Research Lead at Apple",
+          topic: "AR/VR Innovation",
+          image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=200&q=80"
+        }
+      ]
+    },
+    {
+      id: 4,
+      title: "Surprise Round",
       date: "March 25, 2024",
       time: "5:00 PM - 6:00 PM",
       description: "Demonstrations of cutting-edge technology",
@@ -73,7 +94,7 @@ const IndustryTalks = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">Industry Talks</h1>
+        <h1 className="text-4xl font-bold text-gray-900 mb-4">Samjhauta Kendra</h1>
         <p className="text-xl text-gray-600">Learn from industry leaders and gain valuable insights</p>
       </div>
 
@@ -165,4 +186,4 @@ const IndustryTalks = () => {
   );
 };
 
-export default IndustryTalks;
+export default SamjhautaKendra;

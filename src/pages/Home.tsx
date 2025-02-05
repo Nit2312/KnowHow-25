@@ -29,7 +29,7 @@ const Home = () => {
       </div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <Link to="/events/mock-interviews" className="group">
+        <Link to="/events/SafaltaSetu" className="group">
           <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
             <Calendar className="h-20 w-12 text-indigo-600 mb-4" />
             <h3 className="text-xl font-semibold mb-2">Safalta Setu</h3>
@@ -37,7 +37,7 @@ const Home = () => {
           </div>
         </Link>
 
-        <Link to="/events/resume-workshop" className="group">
+        <Link to="/events/VikasPath" className="group">
           <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
             <FileText className="h-16 w-12 text-indigo-600 mb-4" />
             <h3 className="text-xl font-semibold mb-2">Vikas Path</h3>
@@ -45,7 +45,7 @@ const Home = () => {
           </div>
         </Link>
 
-        <Link to="/events/industry-talks" className="group">
+        <Link to="/events/SamjhautaKendra" className="group">
           <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
             <MessageSquare className="h-20 w-12 text-indigo-600 mb-4" />
             <h3 className="text-xl font-semibold mb-2">Samjhauta Kendra</h3>
@@ -53,7 +53,7 @@ const Home = () => {
           </div>
         </Link>
 
-        <Link to="/events/networking" className="group">
+        <Link to="/events/LoknitiShastra" className="group">
           <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
             <Users className="h-16 w-12 text-indigo-600 mb-4" />
             <h3 className="text-xl font-semibold mb-2">Lokniti Shastra</h3>

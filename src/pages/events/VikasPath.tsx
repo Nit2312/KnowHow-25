@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { Calendar, Clock, Users, CheckCircle } from 'lucide-react';
 
-const ResumeWorkshop = () => {
+const VikasPath = () => {
   const [activeRound, setActiveRound] = useState(1);
 
   const rounds = [
     {
       id: 1,
-      title: "Resume Fundamentals",
+      title: "Vichar Prastav",
       date: "March 20, 2024",
       time: "2:00 PM - 3:00 PM",
       description: "Learn the essential components of a professional resume",
@@ -20,7 +20,7 @@ const ResumeWorkshop = () => {
     },
     {
       id: 2,
-      title: "ATS Optimization",
+      title: "Vigyan Sankalp",
       date: "March 20, 2024",
       time: "3:15 PM - 4:00 PM",
       description: "Make your resume ATS-friendly and increase visibility",
@@ -33,7 +33,7 @@ const ResumeWorkshop = () => {
     },
     {
       id: 3,
-      title: "Personal Review",
+      title: "Vyapar Sabha",
       date: "March 20, 2024",
       time: "4:15 PM - 5:00 PM",
       description: "One-on-one resume review with industry professionals",
@@ -49,7 +49,7 @@ const ResumeWorkshop = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">Resume Workshop</h1>
+        <h1 className="text-4xl font-bold text-gray-900 mb-4">Vikas Path</h1>
         <p className="text-xl text-gray-600">Craft a compelling resume that gets you noticed</p>
       </div>
 
@@ -118,4 +118,4 @@ const ResumeWorkshop = () => {
   );
 };
 
-export default ResumeWorkshop;
+export default VikasPath;

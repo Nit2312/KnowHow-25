@@ -1,17 +1,16 @@
 import React, { useState } from 'react';
 import { Calendar, Clock, Users, Building2 } from 'lucide-react';
 
-const NetworkingSession = () => {
+const LoknitiShastra= () => {
   const [activeRound, setActiveRound] = useState(1);
 
   const rounds = [
     {
       id: 1,
-      title: "Speed Networking",
+      title: "Vartaman Dhrishya",
       date: "March 30, 2024",
       time: "5:00 PM - 6:00 PM",
       description: "Quick introductions with multiple professionals",
-      companies: ["Google", "Microsoft", "Amazon"],
       requirements: [
         "Business cards",
         "30-second elevator pitch",
@@ -21,11 +20,11 @@ const NetworkingSession = () => {
     },
     {
       id: 2,
-      title: "Industry Roundtables",
+      title: "Pratik Nirman",
       date: "March 30, 2024",
       time: "6:15 PM - 7:15 PM",
       description: "In-depth discussions with industry leaders",
-      companies: ["Apple", "Meta", "Netflix"],
+      
       requirements: [
         "Research about companies",
         "Industry knowledge",
@@ -35,11 +34,25 @@ const NetworkingSession = () => {
     },
     {
       id: 3,
-      title: "Career Fair",
+      title: "Samathan Yukti",
       date: "March 30, 2024",
       time: "7:30 PM - 8:00 PM",
       description: "Open networking with company representatives",
-      companies: ["LinkedIn", "Twitter", "Uber"],
+      
+      requirements: [
+        "Updated resume copies",
+        "Portfolio (if applicable)",
+        "Company preference list",
+        "Follow-up strategy"
+      ]
+    },
+    {
+      id: 4,
+      title: "Loksabha",
+      date: "March 30, 2024",
+      time: "7:30 PM - 8:00 PM",
+      description: "Open networking with company representatives",
+      
       requirements: [
         "Updated resume copies",
         "Portfolio (if applicable)",
@@ -52,7 +65,7 @@ const NetworkingSession = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">Networking Session</h1>
+        <h1 className="text-4xl font-bold text-gray-900 mb-4">Lokniti Shastra</h1>
         <p className="text-xl text-gray-600">Connect with industry professionals and build valuable relationships</p>
       </div>
 
@@ -119,21 +132,10 @@ const NetworkingSession = () => {
               </ul>
             </div>
           </div>
-
-          <div className="bg-white rounded-lg shadow-lg p-8">
-            <h2 className="text-2xl font-bold mb-6">Participating Companies</h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-              {round.companies.map((company, index) => (
-                <div key={index} className="p-4 text-center border rounded-lg">
-                  <span className="font-semibold text-gray-800">{company}</span>
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
       ))}
     </div>
   );
 };
 
-export default NetworkingSession;
+export default LoknitiShastra;
