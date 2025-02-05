@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Calendar, Clock } from 'lucide-react';
+import { Calendar, Clock, Users, Star } from 'lucide-react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate
 
 const SafaltaSetu = () => {
@@ -23,6 +23,8 @@ const SafaltaSetu = () => {
       id: 2,
       title: "Vichar Samvad",
       date: "March 15, 2024",
+      Mode: "Offline",
+      venue: "A203B, A204, A205, A206",
       time: "1:00 PM - 2:30 PM",
       description: "Design scalable systems and discuss architectural decisions",
       requirements: [
@@ -35,6 +37,8 @@ const SafaltaSetu = () => {
       title: "Taknik Gyaan",
       date: "March 15, 2024",
       time: "3:00 PM - 4:00 PM",
+      Mode: "Offline",
+      venue: "TPC Cell",
       description: "Behavioral questions and cultural fit assessment",
       requirements: [
         "Formal dress",
@@ -46,6 +50,8 @@ const SafaltaSetu = () => {
       title: "Manav Moolya",
       date: "March 15, 2024",
       time: "3:00 PM - 4:00 PM",
+      Mode: "Offline",
+      venue: "B 405",
       description: "Behavioral questions and cultural fit assessment",
       requirements: [
         "Formal dress",
@@ -96,6 +102,18 @@ const SafaltaSetu = () => {
                   <Clock className="h-5 w-5" />
                   <span>{round.time}</span>
                 </div>
+                {/* Display Mode */}
+                <div className="flex items-center space-x-2 text-gray-600">
+                  <Star className="h-5 w-5" />
+                  <span>Mode: {round.Mode}</span>
+                </div>
+                {/* Display Venue if available */}
+                {round.venue && (
+                  <div className="flex items-center space-x-2 text-gray-600">
+                    <Users className="h-5 w-5" />
+                    <span>Venue: {round.venue}</span>
+                  </div>
+                )}
               </div>
               <p className="mt-4 text-gray-700">{round.description}</p>
               <button

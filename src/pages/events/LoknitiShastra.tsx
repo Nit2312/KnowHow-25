@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { Calendar, Clock, Users, Building2, MapPin} from 'lucide-react';
+import { Calendar, Clock, Users, Building2, MapPin, Star} from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const LoknitiShastra = () => {
   const [activeRound, setActiveRound] = useState(1);
-
+  const navigate = useNavigate();
   const rounds = [
     {
       id: 1,
@@ -105,7 +106,7 @@ const LoknitiShastra = () => {
                 </div>
 
                 <div className="flex items-center space-x-2 text-gray-600">
-                  <Building2 className="h-5 w-5" />
+                  <Star className="h-5 w-5" />
                   <span>{round.Mode}</span>
                 </div>
 
@@ -118,7 +119,8 @@ const LoknitiShastra = () => {
                 )}
               </div>
               <p className="mt-4 text-gray-700">{round.description}</p>
-              <button className="mt-8 bg-indigo-600 text-white px-6 py-3 rounded-md hover:bg-indigo-700 transition-colors">
+              <button onClick={() => navigate('/register')} // Navigate to the register page
+                className="mt-8 bg-indigo-600 text-white px-6 py-3 rounded-md hover:bg-indigo-700 transition-colors">
                 Register for {round.title}
               </button>
             </div>
