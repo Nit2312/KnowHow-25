@@ -62,13 +62,33 @@ const Register = () => {
                 placeholder="Password"
               />
             </div>
-          </div>
-
-          <div className="flex items-center justify-between">
-            <div className="text-sm">
-              <Link to="/login" className="font-medium text-indigo-600 hover:text-indigo-500">
-                Already have an account? Sign in
-              </Link>
+            <div>
+              <label htmlFor="Text" className="sr-only">
+                College ID
+              </label>
+              <input
+                id="collegeiD"
+                name="collegeId"
+                type="text"
+                autoComplete="new-password"
+                required
+                className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                placeholder="College ID"
+              />
+            </div>
+            <div>
+              <label htmlFor="Text" className="sr-only">
+                Department
+              </label>
+              <input
+                id="dept"
+                name="dept"
+                type="text"
+                autoComplete="new-password"
+                required
+                className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                placeholder="Department"
+              />
             </div>
           </div>
 

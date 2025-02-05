@@ -7,10 +7,10 @@ const Navbar = () => {
   const [isEventsOpen, setIsEventsOpen] = useState(false);
 
   const events = [
-    { path: "/events/mock-interviews", name: "Mock Interviews" },
-    { path: "/events/resume-workshop", name: "Resume Workshop" },
-    { path: "/events/industry-talks", name: "Industry Talks" },
-    { path: "/events/networking", name: "Networking" }
+    { path: "/events/mock-interviews", name: "Safalta Setu" },
+    { path: "/events/resume-workshop", name: "Vikas Path" },
+    { path: "/events/industry-talks", name: "Samjhauta Kendra" },
+    { path: "/events/networking", name: "Lokniti Shastra" }
   ];
 
   return (
