@@ -1,21 +1,22 @@
 import React, { useState } from 'react';
-import { Calendar, Clock, Users } from 'lucide-react';
+import { Calendar, Clock } from 'lucide-react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 
 const SafaltaSetu = () => {
   const [activeRound, setActiveRound] = useState(1);
+  const navigate = useNavigate(); // Initialize useNavigate
 
   const rounds = [
     {
       id: 1,
       title: "Yukti Pariksha",
       date: "March 15, 2024",
+      Mode: "Online",
       time: "10:00 AM - 12:00 PM",
-      description: "Focus on data structures, algorithms, and problem-solving skills",
+      description: "Aptitude questions in companies test problem-solving, logical reasoning, and math skills, focusing on topics like data structures, algorithms, and quantitative reasoning.",
       requirements: [
-        "Laptop with a working camera and microphone",
+        "Laptop or Smartphone with working camera and microphone",
         "Strong internet connection",
-        "Knowledge of at least one programming language",
-        "Basic understanding of DSA concepts"
       ]
     },
     {
@@ -25,10 +26,8 @@ const SafaltaSetu = () => {
       time: "1:00 PM - 2:30 PM",
       description: "Design scalable systems and discuss architectural decisions",
       requirements: [
-        "Understanding of distributed systems",
-        "Knowledge of databases and caching",
-        "Basic understanding of system design principles",
-        "Experience with API design"
+        "Formal dress",
+        "Note and pen",
       ]
     },
     {
@@ -38,10 +37,8 @@ const SafaltaSetu = () => {
       time: "3:00 PM - 4:00 PM",
       description: "Behavioral questions and cultural fit assessment",
       requirements: [
-        "Updated resume",
-        "Preparation for behavioral questions",
-        "Research about common HR practices",
-        "Professional attire"
+        "Formal dress",
+        "Your Resume",
       ]
     },
     {
@@ -51,10 +48,8 @@ const SafaltaSetu = () => {
       time: "3:00 PM - 4:00 PM",
       description: "Behavioral questions and cultural fit assessment",
       requirements: [
-        "Updated resume",
-        "Preparation for behavioral questions",
-        "Research about common HR practices",
-        "Professional attire"
+        "Formal dress",
+        "Your Resume",
       ]
     }
   ];
@@ -72,11 +67,10 @@ const SafaltaSetu = () => {
           <button
             key={round.id}
             onClick={() => setActiveRound(round.id)}
-            className={`flex-shrink-0 px-6 py-3 rounded-md font-medium transition-colors ${
-              activeRound === round.id
-                ? 'bg-indigo-600 text-white'
-                : 'text-gray-600 hover:bg-gray-100'
-            }`}
+            className={`flex-shrink-0 px-6 py-3 rounded-md font-medium transition-colors ${activeRound === round.id
+              ? 'bg-indigo-600 text-white'
+              : 'text-gray-600 hover:bg-gray-100'
+              }`}
           >
             Round {round.id}: {round.title}
           </button>
@@ -87,9 +81,8 @@ const SafaltaSetu = () => {
       {rounds.map((round) => (
         <div
           key={round.id}
-          className={`transition-opacity duration-300 ${
-            activeRound === round.id ? 'block' : 'hidden'
-          }`}
+          className={`transition-opacity duration-300 ${activeRound === round.id ? 'block' : 'hidden'
+            }`}
         >
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             <div className="flex flex-col justify-center">
@@ -103,13 +96,12 @@ const SafaltaSetu = () => {
                   <Clock className="h-5 w-5" />
                   <span>{round.time}</span>
                 </div>
-                <div className="flex items-center space-x-2 text-gray-600">
-                  <Users className="h-5 w-5" />
-                  <span>Limited to 20 participants per slot</span>
-                </div>
               </div>
               <p className="mt-4 text-gray-700">{round.description}</p>
-              <button className="mt-8 bg-indigo-600 text-white px-6 py-3 rounded-md hover:bg-indigo-700 transition-colors">
+              <button
+                onClick={() => navigate('/register')} // Navigate to the register page
+                className="mt-8 bg-indigo-600 text-white px-6 py-3 rounded-md hover:bg-indigo-700 transition-colors"
+              >
                 Register for {round.title}
               </button>
             </div>
