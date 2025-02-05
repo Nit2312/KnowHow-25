@@ -14,6 +14,7 @@ import SafaltaSetu from './pages/events/SafaltaSetu';
 import VikasPath from './pages/events/VikasPath';
 import SamjhautaKendra from './pages/events/SamjhautaKendra';
 import LoknitiShastra from './pages/events/LoknitiShastra';
+import SubmissionDetails from './pages/SubmissionDetails';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
             <Route path="/events/SamjhautaKendra" element={<SamjhautaKendra />} />
             <Route path="/events/LoknitiShastra" element={<LoknitiShastra/>} />
             <Route path="/results" element={<Results />} />
+            <Route path="/submission-details" element={<SubmissionDetails />} />
             <Route path="/team" element={<Team />} />
           </Routes>
         </main>
