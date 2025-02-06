@@ -29,27 +29,29 @@ const Home = () => {
       </div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <Link to="/events/SafaltaSetu" className="group">
-          <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
-            <Calendar className="h-20 w-12 text-indigo-600 mb-4" />
-            <h3 className="text-xl font-semibold mb-2">Safalta Setu</h3>
-            <p className="text-gray-600">Practice with industry professionals and get valuable feedback</p>
-          </div>
-        </Link>
-
         <Link to="/events/VikasPath" className="group">
           <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
             <FileText className="h-16 w-12 text-indigo-600 mb-4" />
             <h3 className="text-xl font-semibold mb-2">Vikas Path</h3>
-            <p className="text-gray-600">Craft a compelling resume that stands out to employers</p>
+            <p className="text-gray-600">From Idea to Impact: Innovate, Market, Showcase!</p>
           </div>
         </Link>
+
+        <Link to="/events/SafaltaSetu" className="group">
+          <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+            <Calendar className="h-12 w-12 text-indigo-600 mb-4" />
+            <h3 className="text-xl font-semibold mb-2">Safalta Setu</h3>
+            <p className="text-gray-600">The road to success begin here</p>
+          </div>
+        </Link>
+
+
 
         <Link to="/events/SamjhautaKendra" className="group">
           <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
             <MessageSquare className="h-20 w-12 text-indigo-600 mb-4" />
             <h3 className="text-xl font-semibold mb-2">Samjhauta Kendra</h3>
-            <p className="text-gray-600">Learn from industry leaders about current trends and opportunities</p>
+            <p className="text-gray-600">Drive the Outcome: Think, Negotiate, Dominate!</p>
           </div>
         </Link>
 
@@ -74,8 +76,8 @@ const Home = () => {
           <div className="text-center text-white max-w-2xl">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Join Us</h2>
             <p className="text-lg md:text-xl mb-8">Connect with like-minded professionals and take your career to new heights</p>
-            <Link 
-              to="/register" 
+            <Link
+              to="/register"
               className="inline-block bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors"
             >
               Register Now

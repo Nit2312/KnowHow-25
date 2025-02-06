@@ -1,10 +1,15 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Brain, GraduationCap, Users2, ChevronDown, Trophy, Users } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { GraduationCap, Users2, ChevronDown, Trophy, Users } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isEventsOpen, setIsEventsOpen] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location.pathname]);
 
   const events = [
     { path: "/events/SafaltaSetu", name: "Safalta Setu" },
@@ -14,8 +19,7 @@ const Navbar = () => {
   ];
 
   return (
-    <>
-      {/* Mobile overlay */}
+    <div>
       {isOpen && (
         <div
           className="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden"
@@ -23,30 +27,18 @@ const Navbar = () => {
         />
       )}
 
-      {/* Sidebar */}
-      <div className={`fixed top-0 left-0 h-full bg-[#202F3E] text-white w-64 transform transition-transform duration-200 ease-in-out z-50 ${isOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0 overflow-y-auto`}>
-
+      <nav className={`fixed top-0 left-0 h-full w-64 bg-[#202F3E] text-white transform transition-transform duration-200 ease-in-out z-50 ${isOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0 overflow-y-auto`}>
         <div className="p-4">
-          <div className="flex items-center justify-between mb-8">
-            <Link to="/" className="flex items-center space-x-3">
-              <div className="relative">
-
-                <img src="./res/img/KnowHow_25_img.png" alt="" className='w-25 h-25' />
-              </div>
-              <div className="flex flex-col">
-                <span className="font-bold text-xl"></span>
-                <span className="text-xs text-white opacity-[0.7]"></span>
-              </div>
+          <div className="flex items-center justify-center mb-8">
+            <Link to="/">
+              <img src="/res/img/KnowHow_25_img.png" alt="Logo" className="w-40 h-40 object-contain" />
             </Link>
           </div>
-
-          <div className="flex flex-col space-y-4">
+          <div className="flex flex-col space-y-2">
             <Link to="/" className="flex items-center space-x-2 hover:bg-indigo-700 px-4 py-2 rounded-md transition-colors">
               <GraduationCap className="h-5 w-5" />
               <span>Home</span>
             </Link>
-
-            {/* Events Dropdown */}
             <div className="relative">
               <button
                 onClick={() => setIsEventsOpen(!isEventsOpen)}
@@ -56,35 +48,28 @@ const Navbar = () => {
                   <Users2 className="h-5 w-5" />
                   <span>Events</span>
                 </div>
-                <ChevronDown className={`h-4 w-4 transition-transform ${isEventsOpen ? 'rotate-180' : ''}`} />
+                <ChevronDown className="h-4 w-4" />
               </button>
-
-              {isEventsOpen && (
-                <div className="pl-4 mt-2 space-y-2">
-                  {events.map((event) => (
-                    <Link
-                      key={event.path}
-                      to={event.path}
-                      className="block hover:bg-indigo-700 px-4 py-2 rounded-md transition-colors text-sm"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      {event.name}
-                    </Link>
-                  ))}
-                </div>
-              )}
+              <div className={`pl-4 mt-2 space-y-2 ${isEventsOpen ? '' : 'hidden'}`}>
+                {events.map((event) => (
+                  <Link
+                    key={event.path}
+                    to={event.path}
+                    className="block hover:bg-indigo-700 px-4 py-2 rounded-md transition-colors text-sm"
+                  >
+                    {event.name}
+                  </Link>
+                ))}
+              </div>
             </div>
-
             <Link to="/results" className="flex items-center space-x-2 hover:bg-indigo-700 px-4 py-2 rounded-md transition-colors">
               <Trophy className="h-5 w-5" />
               <span>Results</span>
             </Link>
-
             <Link to="/team" className="flex items-center space-x-2 hover:bg-indigo-700 px-4 py-2 rounded-md transition-colors">
               <Users className="h-5 w-5" />
               <span>Our Team</span>
             </Link>
-
             <div className="pt-4 border-t border-indigo-700">
               <Link to="/register" className="block bg-white text-[#202F3E] px-4 py-2 rounded-md hover:bg-indigo-100 transition-colors">
                 Register
@@ -92,16 +77,14 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-      </div>
-
-      {/* Toggle button */}
+      </nav>
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="fixed top-4 left-4 z-50 p-2 bg-indigo-600 rounded-md text-white md:hidden"
       >
         <Users2 className="h-6 w-6" />
       </button>
-    </>
+    </div>
   );
 };
 
