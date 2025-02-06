@@ -75,17 +75,17 @@ const SubmissionDetails: React.FC = () => {
     formData.append("transaction_id", transactionId);
     formData.append("desk_code", deskCode);
     formData.append("friend_id", submissionData.friendId);
-  
+
     if (receipt) {
       formData.append("receipt_upload", receipt);
     }
-  
+
     try {
       const response = await axios.post(
         "https://web.ieeebvm.in/knowhow/user-register.php",
         formData
       );
-  
+
       // Handle success or failure based on the response
       if (response.data.status === "success") {
         alert("Form submitted successfully");
@@ -102,6 +102,14 @@ const SubmissionDetails: React.FC = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 py-8 px-4">
+      <div className="block md:hidden flex items-center mb-6 mt-4">
+        <img
+          src="/res/img/KnowHow'25 .png"
+          alt="Logo"
+          className="w-24 h-24 object-contain mr-2"
+        />
+        <h1 className="text-5xl font-bold text-gray-900 font-custom">KnowHow25</h1>
+      </div>
       <div className="max-w-lg w-full space-y-6 bg-white p-6 rounded-lg shadow-md">
         <h3 className="text-lg font-semibold text-gray-900 text-center">Form Submission Details</h3>
 
@@ -196,7 +204,7 @@ const SubmissionDetails: React.FC = () => {
 
           {paymentMethod === "cash" && (
             <div className="text-sm text-gray-500">
-              
+
             </div>
           )}
 

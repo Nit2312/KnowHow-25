@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    @apply font-sans;
+}
+
+@font-face {
+    font-family: 'burbank';
+    src: url('res/fonts/burbankbigcondensed_bold.otf')format('truetype');
+    font-weight: bold;
+}

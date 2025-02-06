@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation, } from 'react-router-dom';
-import { GraduationCap, Users2, ChevronDown, Trophy, Menu} from 'lucide-react';
+import { GraduationCap, Users2, ChevronDown, Trophy, Menu, Calendar, User} from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -51,7 +51,7 @@ const Navbar = () => {
                 className={`w-full flex items-center justify-between hover:bg-indigo-700 px-4 py-2 rounded-md transition-colors ${isActive('/events')}`}
               >
                 <div className="flex items-center space-x-2">
-                  <Users2 className="h-5 w-5" />
+                  <Calendar className="h-5 w-5" />
                   <span>Events</span>
                 </div>
                 <ChevronDown className="h-4 w-4" />
@@ -77,7 +77,7 @@ const Navbar = () => {
 
             
             <Link to="/team" className={`flex items-center space-x-2 hover:bg-indigo-700 px-4 py-2 rounded-md transition-colors ${isActive('/team')}`}>
-              <Menu className="h-5 w-5" />
+              <User className="h-5 w-5" />
               <span>Our Team</span>
             </Link>
 

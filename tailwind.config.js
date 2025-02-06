@@ -7,6 +7,10 @@ export default {
         'w-16': 16,
         'h-9': 9,
       },
+      fontFamily: {
+        sans : ['Cardo'],
+        custom : ['burbank']
+      }
     },
   },
   plugins: [],

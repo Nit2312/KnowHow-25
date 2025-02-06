@@ -67,11 +67,11 @@ const LoknitiShastra = () => {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="block md:hidden flex items-center mb-6 mt-4">
         <img
-          src="/res/img/knowHow'25 img.png"
+          src="/res/img/KnowHow'25 .png"
           alt="Logo"
-          className="w-14 h-14 object-contain mr-2" 
+          className="w-24 h-24 object-contain mr-2"
         />
-        <h1 className="text-2xl font-bold text-gray-900">KnowHow25</h1>
+        <h1 className="text-5xl font-bold text-gray-900 font-custom">KnowHow25</h1>
       </div>
 
 

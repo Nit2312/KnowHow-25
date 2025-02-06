@@ -106,6 +106,14 @@ const Register = () => {
   return (
     <div className="min-h-[calc(100vh-4rem)] flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-2xl w-full space-y-8">
+        <div className="block md:hidden flex items-center mb-6 mt-4">
+          <img
+            src="/res/img/KnowHow'25 .png"
+            alt="Logo"
+            className="w-24 h-24 object-contain mr-2"
+          />
+          <h1 className="text-5xl font-bold text-gray-900 font-custom">KnowHow25</h1>
+        </div>
         <div>
           <div className="mx-auto flex justify-center">
             <UserPlus className="h-12 w-12 text-indigo-600" />

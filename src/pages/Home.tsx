@@ -6,23 +6,20 @@ const Home = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="flex items-center justify-between mb-16">
-        <img
-          src="/res/img/BVM.png"
-          alt="Logo"
-          className="w-32 h-32 object-contain"
-        />
         <div className="flex-1 text-center md:text-center mx-8">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-4">
+          <h1 className="text-4xl sm:text-5xl md:text-8xl font-bold text-gray-900 mb-0 font-custom">
             KnowHow'25
           </h1>
-          <p className="text-lg sm:text-xl md:text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl md:text-xl text-gray-600 max-w-2xl mx-auto mt-0">
             Embrace the Power of knowledge.
           </p>
         </div>
+        <img
+          src="/res/img/BVM.png"
+          alt="Logo"
+          className="w-28 h-28 object-contain"
+        />
       </div>
-
-
-
 
       {/* YouTube Video Section */}
       <div className="mb-16 bg-white rounded-xl shadow-lg overflow-hidden">

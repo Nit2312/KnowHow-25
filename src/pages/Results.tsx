@@ -27,6 +27,14 @@ const Results = () => {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="block md:hidden flex items-center mb-6 mt-4">
+        <img
+          src="/res/img/KnowHow'25 .png"
+          alt="Logo"
+          className="w-24 h-24 object-contain mr-2"
+        />
+        <h1 className="text-5xl font-bold text-gray-900 font-custom">KnowHow25</h1>
+      </div>
       <div className="text-center mb-16">
         <h1 className="text-4xl font-bold text-gray-900 mb-4">Event Results</h1>
         <p className="text-xl text-gray-600">Track our events' impact and success metrics</p>
