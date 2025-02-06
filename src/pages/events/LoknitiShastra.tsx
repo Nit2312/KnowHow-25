@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { Calendar, Clock, Users, Building2, MapPin, Star} from 'lucide-react';
+import { Calendar, Clock, Users, MapPin, Star } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const LoknitiShastra = () => {
   const [activeRound, setActiveRound] = useState(1);
   const navigate = useNavigate();
+
   const rounds = [
     {
       id: 1,
@@ -15,9 +16,9 @@ const LoknitiShastra = () => {
       description: "The quiz tests knowledge of current affairs, general knowledge, and recent political changes.",
       requirements: [
         "Participants will answer 50 questions.",
-        "The time limit is 25 minutes to complete the quiz.  ",
-        "The quiz tests both speed and accuracy in political and economic topics.  ",
-        "The goal is to identify the top scorers who complete the quiz the fastest."
+        "The time limit is 25 minutes to complete the quiz.",
+        "The quiz tests both speed and accuracy in political and economic topics.",
+        "The goal is to identify the top scorers who complete the quiz the fastest."
       ]
     },
     {
@@ -29,7 +30,7 @@ const LoknitiShastra = () => {
       requirements: [
         "Participants design a logo and slogan reflecting the event's theme.",
         "Designs are judged on originality, appeal, and simplicity.",
-        "The round emphasizes innovation and visual communication skills.",
+        "The round emphasizes innovation and visual communication skills.",
       ]
     },
     {
@@ -42,8 +43,8 @@ const LoknitiShastra = () => {
       requirements: [
         "Participants respond to real-world situations with practical, accurate solutions.",
         "Focuses on critical thinking and quick decision-making.",
-        "Avoids hypothetical scenarios, emphasizing actionable answers. ",
-        "Evaluates problem-solving skills in dynamic scenarios."
+        "Avoids hypothetical scenarios, emphasizing actionable answers.",
+        "Evaluates problem-solving skills in dynamic scenarios."
       ]
     },
     {
@@ -57,27 +58,43 @@ const LoknitiShastra = () => {
         "Participants are divided into supporters and opposers of a given ministry.",
         "Each presents clear, concise arguments supported by relevant data.",
         "Tests ability to engage in structured, persuasive debate.",
-        "Focuses on adherence to debate principles and well-supported viewpoints."
+        "Focuses on adherence to debate principles and well-supported viewpoints."
       ]
     }
   ];
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">Lokniti Shastra</h1>
-        <p className="text-xl text-gray-600">Rise, Speak, Lead</p>
+      <div className="block md:hidden flex items-center mb-6 mt-4">
+        <img
+          src="/res/img/knowHow'25 img.png"
+          alt="Logo"
+          className="w-14 h-14 object-contain mr-2" 
+        />
+        <h1 className="text-2xl font-bold text-gray-900">KnowHow25</h1>
       </div>
 
-      {/* Rounds Navigation */}
+
+      <div className="flex flex-col md:flex-row items-center mb-12 space-y-6 md:space-y-0 md:space-x-6">
+        <img
+          src="/res/img/politic.png"
+          alt="Logo"
+          className="w-32 h-32 object-contain transition-transform duration-300 transform hover:scale-105"
+        />
+        <div>
+          <h1 className="text-4xl font-extrabold text-gray-900 mb-2">Lokniti Shastra</h1>
+          <p className="text-lg text-gray-600">Rise, Speak, Lead</p>
+        </div>
+      </div>
+
       <div className="flex overflow-x-auto mb-8 bg-white rounded-lg shadow-md p-2">
         {rounds.map((round) => (
           <button
             key={round.id}
             onClick={() => setActiveRound(round.id)}
             className={`flex-shrink-0 px-6 py-3 rounded-md font-medium transition-colors ${activeRound === round.id
-                ? 'bg-indigo-600 text-white'
-                : 'text-gray-600 hover:bg-gray-100'
+              ? 'bg-indigo-600 text-white'
+              : 'text-gray-600 hover:bg-gray-100'
               }`}
           >
             Round {round.id}: {round.title}
@@ -85,12 +102,10 @@ const LoknitiShastra = () => {
         ))}
       </div>
 
-      {/* Active Round Content */}
       {rounds.map((round) => (
         <div
           key={round.id}
-          className={`transition-opacity duration-300 ${activeRound === round.id ? 'block' : 'hidden'
-            }`}
+          className={`transition-opacity duration-300 ${activeRound === round.id ? 'block' : 'hidden'}`}
         >
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             <div className="flex flex-col justify-center">
@@ -110,7 +125,6 @@ const LoknitiShastra = () => {
                   <span>{round.Mode}</span>
                 </div>
 
-                {/* Conditionally render Venue if it exists */}
                 {round.Venue && (
                   <div className="flex items-center space-x-2 text-gray-600">
                     <MapPin className="h-5 w-5" />
@@ -119,8 +133,7 @@ const LoknitiShastra = () => {
                 )}
               </div>
               <p className="mt-4 text-gray-700">{round.description}</p>
-              <button onClick={() => navigate('/register')} // Navigate to the register page
-                className="mt-8 bg-indigo-600 text-white px-6 py-3 rounded-md hover:bg-indigo-700 transition-colors">
+              <button onClick={() => navigate('/register')} className="mt-8 bg-indigo-600 text-white px-6 py-3 rounded-md hover:bg-indigo-700 transition-colors">
                 Register for {round.title}
               </button>
             </div>

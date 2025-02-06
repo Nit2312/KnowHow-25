@@ -5,14 +5,24 @@ import { Calendar, Users, FileText, MessageSquare } from 'lucide-react';
 const Home = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div className="text-center mb-16">
-        <h1 className="text-6xl font-bold text-gray-900 mb-4">
-          KnowHow'25
-        </h1>
-        <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-          Embrace the Power of knowledge.
-        </p>
+      <div className="flex items-center justify-between mb-16">
+        <img
+          src="/res/img/BVM.png"
+          alt="Logo"
+          className="w-32 h-32 object-contain"
+        />
+        <div className="flex-1 text-center md:text-center mx-8">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-4">
+            KnowHow'25
+          </h1>
+          <p className="text-lg sm:text-xl md:text-xl text-gray-600 max-w-2xl mx-auto">
+            Embrace the Power of knowledge.
+          </p>
+        </div>
       </div>
+
+
+
 
       {/* YouTube Video Section */}
       <div className="mb-16 bg-white rounded-xl shadow-lg overflow-hidden">
@@ -30,45 +40,61 @@ const Home = () => {
 
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
         <Link to="/events/VikasPath" className="group">
-          <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
-            <FileText className="h-16 w-12 text-indigo-600 mb-4" />
+          <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow h-full flex flex-col">
+            <img
+              src="/res/img/entre.png"
+              alt="Samjhauta Kendra"
+              className="w-16 h-16 object-contain mb-4"  // Ensure the image is correctly sized and centered
+            />
             <h3 className="text-xl font-semibold mb-2">Vikas Path</h3>
-            <p className="text-gray-600">From Idea to Impact: Innovate, Market, Showcase!</p>
+            <p className="text-gray-600 flex-grow">From Idea to Impact: Innovate, Market, Showcase!</p>
           </div>
         </Link>
 
         <Link to="/events/SafaltaSetu" className="group">
-          <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
-            <Calendar className="h-12 w-12 text-indigo-600 mb-4" />
+          <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow h-full flex flex-col">
+            <img
+              src="/res/img/placement copy.png"
+              alt="Samjhauta Kendra"
+              className="w-16 h-16 object-contain mb-4"  // Ensure the image is correctly sized and centered
+            />
             <h3 className="text-xl font-semibold mb-2">Safalta Setu</h3>
-            <p className="text-gray-600">The road to success begin here</p>
+            <p className="text-gray-600 flex-grow">The road to success begins here</p>
           </div>
         </Link>
-
-
 
         <Link to="/events/SamjhautaKendra" className="group">
-          <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
-            <MessageSquare className="h-20 w-12 text-indigo-600 mb-4" />
+          <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow h-full flex flex-col">
+            <img
+              src="/res/img/nego.png"
+              alt="Samjhauta Kendra"
+              className="w-16 h-16 object-contain mb-4"  // Ensure the image is correctly sized and centered
+            />
             <h3 className="text-xl font-semibold mb-2">Samjhauta Kendra</h3>
-            <p className="text-gray-600">Drive the Outcome: Think, Negotiate, Dominate!</p>
+            <p className="text-gray-600 flex-grow">Drive the Outcome: Think, Negotiate, Dominate!</p>
           </div>
         </Link>
 
+
         <Link to="/events/LoknitiShastra" className="group">
-          <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
-            <Users className="h-16 w-12 text-indigo-600 mb-4" />
+          <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow h-full flex flex-col">
+            <img
+              src="/res/img/politic.png"
+              alt="Samjhauta Kendra"
+              className="w-16 h-16 object-contain mb-4"  // Ensure the image is correctly sized and centered
+            />
             <h3 className="text-xl font-semibold mb-2">Lokniti Shastra</h3>
-            <p className="text-gray-600">Rise, Speak, Lead</p>
+            <p className="text-gray-600 flex-grow">Rise, Speak, Lead</p>
           </div>
         </Link>
       </div>
+
 
       {/* Image Section with Overlay Text */}
       <div className="mt-16 relative overflow-hidden rounded-2xl shadow-xl">
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/90 to-indigo-900/90 mix-blend-multiply" />
         <img
-          src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=2000&q=80"
+          src="/res/img/bvm front.jpg"
           alt="Team collaboration"
           className="w-full h-[400px] object-cover"
         />

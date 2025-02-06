@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 const VikasPath = () => {
   const [activeRound, setActiveRound] = useState(1);
   const navigate = useNavigate();
+
   const rounds = [
     {
       id: 1,
@@ -49,22 +50,38 @@ const VikasPath = () => {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">Vikas Path</h1>
-        <p className="text-xl text-gray-600">Craft a compelling resume that gets you noticed</p>
+      <div className="block md:hidden flex items-center mb-6 mt-4">
+        <img
+          src="/res/img/knowHow'25 img.png"
+          alt="Logo"
+          className="w-14 h-14 object-contain mr-2"
+        />
+        <h1 className="text-2xl font-bold text-gray-900">KnowHow25</h1>
+      </div>
+      {/* Header Section */}
+      <div className="flex flex-col md:flex-row items-center mb-12 space-y-6 md:space-y-0 md:space-x-6">
+        <img
+          src="/res/img/entre.png"
+          alt="Logo"
+          className="w-32 h-32 object-contain transition-transform duration-300 transform hover:scale-105"
+        />
+
+        <div>
+          <h1 className="text-4xl font-extrabold text-gray-900 mb-2">Vikas Path</h1>
+          <p className="text-lg text-gray-600">Craft a compelling resume that gets you noticed</p>
+        </div>
       </div>
 
       {/* Rounds Navigation */}
-      <div className="flex overflow-x-auto mb-8 bg-white rounded-lg shadow-md p-2">
+      <div className="flex overflow-x-auto mb-8 bg-white rounded-lg shadow-md p-2 space-x-4 scrollbar-hide">
         {rounds.map((round) => (
           <button
             key={round.id}
             onClick={() => setActiveRound(round.id)}
-            className={`flex-shrink-0 px-6 py-3 rounded-md font-medium transition-colors ${
-              activeRound === round.id
-                ? 'bg-indigo-600 text-white'
-                : 'text-gray-600 hover:bg-gray-100'
-            }`}
+            className={`flex-shrink-0 px-6 py-3 rounded-md font-medium transition-colors ${activeRound === round.id
+              ? 'bg-indigo-600 text-white'
+              : 'text-gray-600 hover:bg-gray-100'
+              }`}
           >
             Round {round.id}: {round.title}
           </button>
@@ -75,11 +92,10 @@ const VikasPath = () => {
       {rounds.map((round) => (
         <div
           key={round.id}
-          className={`transition-opacity duration-300 ${
-            activeRound === round.id ? 'block' : 'hidden'
-          }`}
+          className={`transition-opacity duration-300 ${activeRound === round.id ? 'block' : 'hidden'}`}
         >
           <div className="grid md:grid-cols-2 gap-8 mb-12">
+            {/* Round Content */}
             <div className="flex flex-col justify-center">
               <h2 className="text-2xl font-bold mb-4">{round.title}</h2>
               <div className="space-y-4">
@@ -97,11 +113,15 @@ const VikasPath = () => {
                 </div>
               </div>
               <p className="mt-4 text-gray-700">{round.description}</p>
-              <button onClick={() => navigate('/register')} // Navigate to the register page
-                className="mt-8 bg-indigo-600 text-white px-6 py-3 rounded-md hover:bg-indigo-700 transition-colors">
+              <button
+                onClick={() => navigate('/register')}
+                className="mt-8 bg-indigo-600 text-white px-6 py-3 rounded-md hover:bg-indigo-700 transition-colors"
+              >
                 Register for {round.title}
               </button>
             </div>
+
+            {/* Topics Covered */}
             <div className="bg-white rounded-lg shadow-lg p-8">
               <h3 className="text-xl font-semibold mb-4">Topics Covered</h3>
               <div className="grid gap-4">

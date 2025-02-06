@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Calendar, Clock, Users, Star } from 'lucide-react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import { useNavigate } from 'react-router-dom';
 
 const SamjhautaKendra = () => {
   const [activeRound, setActiveRound] = useState(1);
-  const navigate = useNavigate(); // Initialize navigate
+  const navigate = useNavigate();
 
   const rounds = [
     {
@@ -26,7 +26,7 @@ const SamjhautaKendra = () => {
       title: "Kalam Ki Takat",
       date: "March 25, 2024",
       time: "3:00 PM - 4:30 PM",
-      description: "It is an online event where participants submit professional emails, evaluated on structure, clarity, and persuasion skills. The goal is to assess participants' ability to effectively communicate their ideas and justify their needs in a concise and professional manner.",
+      description: "It is an online event where participants submit professional emails, evaluated on structure, clarity, and persuasion skills.",
       requirements: [
         "Laptop or Smartphone with internet access.",
         "Proper email formatting and professionalism.",
@@ -41,7 +41,7 @@ const SamjhautaKendra = () => {
       venue: "A201",
       date: "March 25, 2024",
       time: "3:15 PM onwards",
-      description: "Charchaa Chakra is an offline event where students engage in a budget allocation discussion, aiming to utilize 100% of the budget with professionalism. Jury members assess leadership, adaptability, and a company-first mindset to select top participants.",
+      description: "An offline event where students engage in a budget allocation discussion.",
       requirements: [
         "Basic knowledge of cutting-edge tech.",
         "Active participation during the demo.",
@@ -56,7 +56,7 @@ const SamjhautaKendra = () => {
       Mode: "Offline",
       venue: "TPC Cell",
       time: "9:30 AM onwards",
-      description: "It is a surprise round, and its details will be available on the same day of the event.",
+      description: "A surprise round with details available on the event day.",
       requirements: [
         "Curiosity about new technologies.",
         "Ability to think on your feet.",
@@ -68,13 +68,30 @@ const SamjhautaKendra = () => {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">Samjhauta Kendra</h1>
-        <p className="text-xl text-gray-600">Learn from industry leaders and gain valuable insights</p>
+      <div className="block md:hidden flex items-center mb-6 mt-4">
+        <img
+          src="/res/img/knowHow'25 img.png"
+          alt="Logo"
+          className="w-14 h-14 object-contain mr-2"
+        />
+        <h1 className="text-2xl font-bold text-gray-900">KnowHow25</h1>
+      </div>
+
+      <div className="flex flex-col md:flex-row items-center mb-12 space-y-6 md:space-y-0 md:space-x-6">
+        <img
+          src="/res/img/nego.png"
+          alt="Logo"
+          className="w-32 h-32 object-contain transition-transform duration-300 transform hover:scale-105"
+        />
+
+        <div>
+          <h1 className="text-4xl font-extrabold text-gray-900 mb-2">Samjhauta Kendra</h1>
+          <p className="text-lg text-gray-600">Learn from industry leaders and gain valuable insights</p>
+        </div>
       </div>
 
       {/* Rounds Navigation */}
-      <div className="flex overflow-x-auto mb-8 bg-white rounded-lg shadow-md p-2">
+      <div className="flex overflow-x-auto mb-8 bg-white rounded-lg shadow-md p-2 space-x-4 scrollbar-hide">
         {rounds.map((round) => (
           <button
             key={round.id}
@@ -89,12 +106,11 @@ const SamjhautaKendra = () => {
         ))}
       </div>
 
-      {/* Active Round Content */}
+
       {rounds.map((round) => (
         <div
           key={round.id}
-          className={`transition-opacity duration-300 ${activeRound === round.id ? 'block' : 'hidden'
-            }`}
+          className={`transition-opacity duration-300 ${activeRound === round.id ? 'block' : 'hidden'}`}
         >
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             <div className="flex flex-col justify-center">
@@ -108,12 +124,12 @@ const SamjhautaKendra = () => {
                   <Clock className="h-5 w-5" />
                   <span>{round.time}</span>
                 </div>
-                {/* Display Mode */}
+
                 <div className="flex items-center space-x-2 text-gray-600">
                   <Star className="h-5 w-5" />
                   <span>Mode: {round.Mode}</span>
                 </div>
-                {/* Display Venue if available */}
+
                 {round.venue && (
                   <div className="flex items-center space-x-2 text-gray-600">
                     <Users className="h-5 w-5" />
@@ -123,7 +139,7 @@ const SamjhautaKendra = () => {
               </div>
               <p className="mt-4 text-gray-700">{round.description}</p>
               <button
-                onClick={() => navigate('/register')} // Now this should work
+                onClick={() => navigate('/register')}
                 className="mt-8 bg-indigo-600 text-white px-6 py-3 rounded-md hover:bg-indigo-700 transition-colors"
               >
                 Register for {round.title}

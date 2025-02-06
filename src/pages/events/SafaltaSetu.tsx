@@ -62,10 +62,27 @@ const SafaltaSetu = () => {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">Safalta Setu</h1>
-        <p className="text-xl text-gray-600">The road to success begin here</p>
+      <div className="block md:hidden flex items-center mb-6 mt-4">
+        <img
+          src="/res/img/knowHow'25 img.png"
+          alt="Logo"
+          className="w-14 h-14 object-contain mr-2"
+        />
+        <h1 className="text-2xl font-bold text-gray-900">KnowHow25</h1>
       </div>
+      <div className="flex flex-col md:flex-row items-center mb-12 space-y-6 md:space-y-0 md:space-x-6">
+        <img
+          src="/res/img/placement copy.png"
+          alt="Logo"
+          className="w-32 h-32 object-contain transition-transform duration-300 transform hover:scale-105"
+        />
+
+        <div>
+          <h1 className="text-4xl font-extrabold text-gray-900 mb-2">Safalta Setu</h1>
+          <p className="text-lg text-gray-600">The road to success begin here</p>
+        </div>
+      </div>
+
 
       {/* Rounds Navigation */}
       <div className="flex overflow-x-auto mb-8 bg-white rounded-lg shadow-md p-2">
