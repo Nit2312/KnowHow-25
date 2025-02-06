@@ -24,6 +24,7 @@ interface SubmissionData {
   selectedEvents: Event[];
   totalAmount: number;
   collegeName: string;
+  friendId: string;
 }
 
 const SubmissionDetails: React.FC = () => {
@@ -64,7 +65,7 @@ const SubmissionDetails: React.FC = () => {
     formData.append("name", submissionData.name);
     formData.append("email", submissionData.email);
     formData.append("mobile_no", submissionData.mobileNumber);
-    formData.append("student_id", submissionData.collegeName);
+    formData.append("college_name", submissionData.collegeName);
     formData.append("student_id", submissionData.collegeId);
     formData.append("department", submissionData.department);
     formData.append("year", submissionData.year);
@@ -73,6 +74,7 @@ const SubmissionDetails: React.FC = () => {
     formData.append("payment_method", paymentMethod);
     formData.append("transaction_id", transactionId);
     formData.append("desk_code", deskCode);
+    formData.append("friend_id", submissionData.friendId);
   
     if (receipt) {
       formData.append("receipt_upload", receipt);
@@ -118,6 +120,7 @@ const SubmissionDetails: React.FC = () => {
           <p>College ID: {submissionData.collegeId}</p>
           <p>Department: {submissionData.department}</p>
           <p>Year: {submissionData.year}</p>
+          <p>Friend ID: {submissionData.friendId}</p>
         </div>
 
         {/* Selected Events */}

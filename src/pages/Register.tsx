@@ -39,14 +39,7 @@ const Register = () => {
   ];
 
   const departments = [
-    'CP', // cp
-    'IT', // IT
-    'EC', // EC
-    'EE', // EE
-    'ME', // ME
-    'CE', // CE
-    'PE', // PE
-    'EL', //El
+    'CP', 'IT', 'EC', 'EE', 'ME', 'CE', 'PE', 'EL',
   ];
 
   const years = ['1st Year', '2nd Year', '3rd Year', '4th Year'];
@@ -290,6 +283,24 @@ const Register = () => {
                 </label>
               </div>
             ))}
+
+            {/* Friend ID Input (only for Vikas Path) */}
+            {selectedEvents.includes('Vikas-Path') && (
+              <div>
+                <label htmlFor="friendId" className="block text-sm font-medium text-gray-700 mb-1">
+                  Friend's ID
+                </label>
+                <input
+                  id="friendId"
+                  name="friendId"
+                  type="text"
+                  value={formData.friendId}
+                  onChange={handleInputChange}
+                  className="appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                  placeholder="Enter your friend's ID"
+                />
+              </div>
+            )}
           </div>
 
           {/* Submit Button */}
