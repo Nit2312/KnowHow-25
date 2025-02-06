@@ -4,18 +4,16 @@ import { Linkedin, Mail, Star } from 'lucide-react';
 const Team = () => {
   const teamMembers = [
     {
-      name: "Dr. Emily Chen",
-      role: "Founder & CEO",
-      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=400&q=80",
-      bio: "Former Google Tech Lead with 15+ years of industry experience",
+      name: "Prof Mehul Patel",
+      role: "Traning and Placement Officer",
+      image: "/res/img/team/MehulPatel.jpeg",
       linkedin: "#",
       email: "emily@wisdompath.com"
     },
     {
-      name: "Michael Thompson",
-      role: "Head of Career Services",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80",
-      bio: "Ex-Amazon recruiter helping students land their dream jobs",
+      name: "Dr Robinson Paul",
+      role: "Traning and Placement In-Charge",
+      image: "/res/img/team/RobinsonPaul.jpeg",
       linkedin: "#",
       email: "michael@wisdompath.com"
     }
@@ -54,12 +52,11 @@ const Team = () => {
               <img
                 src={member.image}
                 alt={member.name}
-                className="w-full h-48 object-cover"
+                className="w-full h-50 object-cover"
               />
               <div className="p-6">
                 <h3 className="font-bold text-lg mb-1">{member.name}</h3>
                 <p className="text-indigo-600 mb-3">{member.role}</p>
-                <p className="text-gray-600 text-sm mb-4">{member.bio}</p>
                 <div className="flex space-x-4">
                   <a href={member.linkedin} className="text-gray-600 hover:text-indigo-600">
                     <Linkedin className="h-5 w-5" />

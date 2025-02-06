@@ -6,11 +6,11 @@ const Home = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="text-center mb-16">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">
-          Welcome to Pragyan
+        <h1 className="text-6xl font-bold text-gray-900 mb-4">
+          KnowHow'25
         </h1>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-          Empowering your career journey through knowledge, preparation, and networking
+          Embrace the Power of knowledge.
         </p>
       </div>
 
@@ -57,7 +57,7 @@ const Home = () => {
           <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
             <Users className="h-16 w-12 text-indigo-600 mb-4" />
             <h3 className="text-xl font-semibold mb-2">Lokniti Shastra</h3>
-            <p className="text-gray-600">Connect with professionals and build valuable relationships</p>
+            <p className="text-gray-600">Rise, Speak, Lead</p>
           </div>
         </Link>
       </div>
@@ -72,7 +72,7 @@ const Home = () => {
         />
         <div className="absolute inset-0 flex items-center justify-center p-8">
           <div className="text-center text-white max-w-2xl">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Join Our Community</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Join Us</h2>
             <p className="text-lg md:text-xl mb-8">Connect with like-minded professionals and take your career to new heights</p>
             <Link 
               to="/register" 

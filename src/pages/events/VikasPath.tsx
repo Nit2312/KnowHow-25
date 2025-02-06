@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { Calendar, Clock, Users, CheckCircle } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const VikasPath = () => {
   const [activeRound, setActiveRound] = useState(1);
-
+  const navigate = useNavigate();
   const rounds = [
     {
       id: 1,
@@ -96,7 +97,8 @@ const VikasPath = () => {
                 </div>
               </div>
               <p className="mt-4 text-gray-700">{round.description}</p>
-              <button className="mt-8 bg-indigo-600 text-white px-6 py-3 rounded-md hover:bg-indigo-700 transition-colors">
+              <button onClick={() => navigate('/register')} // Navigate to the register page
+                className="mt-8 bg-indigo-600 text-white px-6 py-3 rounded-md hover:bg-indigo-700 transition-colors">
                 Register for {round.title}
               </button>
             </div>

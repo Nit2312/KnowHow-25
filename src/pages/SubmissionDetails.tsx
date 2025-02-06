@@ -30,6 +30,7 @@ const SubmissionDetails: React.FC = () => {
     40: "/res/img/KnowHow'25 img4.png",
   };
 
+  console.log(submissionData?.name);
   // Determine image based on totalAmount
   const imageUrl = imageMap[submissionData?.totalAmount || 0] || "";
 

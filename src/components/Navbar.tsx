@@ -34,8 +34,8 @@ const Navbar = () => {
                 <img src="./res/img/KnowHow_25_img.png" alt="" className='w-25 h-25' />
               </div>
               <div className="flex flex-col">
-                <span className="font-bold text-xl">Pragyan</span>
-                <span className="text-xs text-white opacity-[0.7]">Guiding Your Success</span>
+                <span className="font-bold text-xl"></span>
+                <span className="text-xs text-white opacity-[0.7]"></span>
               </div>
             </Link>
           </div>
