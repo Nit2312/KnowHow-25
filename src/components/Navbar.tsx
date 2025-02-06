@@ -35,7 +35,7 @@ const Navbar = () => {
               </div>
               <div className="flex flex-col">
                 <span className="font-bold text-xl">Pragyan</span>
-                <span className="text-xs text-indigo-200">Guiding Your Success</span>
+                <span className="text-xs text-white opacity-[0.7]">Guiding Your Success</span>
               </div>
             </Link>
           </div>
@@ -85,8 +85,8 @@ const Navbar = () => {
               <span>Our Team</span>
             </Link>
 
-            <div className="pt-4 border-t border-indigo-500">
-              <Link to="/register" className="block bg-white text-indigo-600 px-4 py-2 rounded-md hover:bg-indigo-100 transition-colors">
+            <div className="pt-4 border-t border-indigo-700">
+              <Link to="/register" className="block bg-white text-[#202F3E] px-4 py-2 rounded-md hover:bg-indigo-100 transition-colors">
                 Register
               </Link>
             </div>

@@ -9,6 +9,7 @@ interface Event {
 interface SubmissionData {
   name: string;
   email: string;
+  mobileNumber: string;
   collegeId: string;
   department: string;
   year: string;
@@ -46,6 +47,7 @@ const SubmissionDetails: React.FC = () => {
           <h4 className="font-semibold">Personal Information</h4>
           <p>Name: {submissionData.name}</p>
           <p>Email: {submissionData.email}</p>
+          <p>Mobile Number: {submissionData.mobileNumber}</p> {/* Display Mobile Number */}
         </div>
 
         {/* College Information */}

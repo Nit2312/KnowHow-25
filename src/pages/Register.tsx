@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 interface FormData {
   name: string;
   email: string;
+
   password: string;
   collegeId: string;
   department: string;
@@ -12,6 +13,7 @@ interface FormData {
   selectedEvents: string[];
   totalAmount: number;
   deskNumber: number;
+  mobileNumber: string;
 }
 
 const Register = () => {
@@ -27,6 +29,7 @@ const Register = () => {
     selectedEvents: [],
     totalAmount: 0,
     deskNumber: 0,
+    mobileNumber: '',
   });
 
   const events = [
@@ -37,14 +40,14 @@ const Register = () => {
   ];
 
   const departments = [
-    'Computer Emgineering', // cp
-    'Information Technology', // IT
-    'Electronics & Communication', // EC
-    'Electrical Engineering', // EE
-    'Mechanical Engineering', // ME
-    'Civil Engineering', // CE
-    'Production Engineering', // PE
-    'Electronic Engineering', //El
+    'CP', // cp
+    'IT', // IT
+    'EC', // EC
+    'EE', // EE
+    'ME', // ME
+    'CE', // CE
+    'PE', // PE
+    'EL', //El
   ];
 
   const years = ['1st Year', '2nd Year', '3rd Year', '4th Year'];
@@ -79,11 +82,13 @@ const Register = () => {
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
+
     setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: name === 'mobileNumber' ? value.replace(/\D/g, '') : value, // Ensure only numbers
     }));
   };
+
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -100,9 +105,10 @@ const Register = () => {
       ...formData,
       selectedEvents: selectedEventDetails,
       totalAmount: calculateTotal(),
-      deskNumber: formData.deskNumber 
+      deskNumber: formData.deskNumber,
+      mobileNumber: formData.mobileNumber
     };
-    
+
 
     // Redirect to a new page and pass data
     navigate('/submission-details', { state: { submissionData } });
@@ -169,6 +175,23 @@ const Register = () => {
                 className="appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                 placeholder="Create a password"
               />
+            </div>
+            <div>
+              <label htmlFor="Number" className="block text-sm font-medium text-gray-700 mb-1">
+                Mobile Number
+              </label>
+              <input
+                id="mobileNumber"
+                name="mobileNumber"
+                type="text"
+                required
+                value={formData.mobileNumber}
+                onChange={handleInputChange}
+                maxLength={10}  // Optional: Restrict input to 10 digits
+                className="appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                placeholder="Enter your mobile number"
+              />
+
             </div>
           </div>
 
