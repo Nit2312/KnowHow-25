@@ -5,14 +5,11 @@ import { useNavigate } from 'react-router-dom';
 interface FormData {
   name: string;
   email: string;
-
-  password: string;
   collegeId: string;
   department: string;
   year: string;
   selectedEvents: string[];
   totalAmount: number;
-  deskNumber: number;
   mobileNumber: string;
 }
 
@@ -22,21 +19,19 @@ const Register = () => {
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
-    password: '',
     collegeId: '',
     department: '',
     year: '',
     selectedEvents: [],
     totalAmount: 0,
-    deskNumber: 0,
     mobileNumber: '',
   });
 
   const events = [
-    { id: 'Safalta-Setu', name: 'Safalta Setu', price: 40 },
-    { id: 'Vikas-Path', name: 'Vikas Path', price: 40 },
-    { id: 'Samjhauta-Kendra', name: 'Samjhauta Kendra', price: 40 },
-    { id: 'Lokniti-Shastra', name: 'Lokniti Shastra', price: 40 }
+    { id: 'Safalta-Setu', name: 'Safalta Setu', price: 30 },
+    { id: 'Vikas-Path', name: 'Vikas Path', price: 30 },
+    { id: 'Samjhauta-Kendra', name: 'Samjhauta Kendra', price: 30 },
+    { id: 'Lokniti-Shastra', name: 'Lokniti Shastra', price: 30 }
   ];
 
   const departments = [
@@ -51,7 +46,6 @@ const Register = () => {
   ];
 
   const years = ['1st Year', '2nd Year', '3rd Year', '4th Year'];
-  const deskNumber = ['1', '2', '3', '4'];
 
   const comboPrice = 100;
   const savings = events.reduce((acc, event) => acc + event.price, 0) - comboPrice;
@@ -89,7 +83,6 @@ const Register = () => {
     }));
   };
 
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -105,10 +98,8 @@ const Register = () => {
       ...formData,
       selectedEvents: selectedEventDetails,
       totalAmount: calculateTotal(),
-      deskNumber: formData.deskNumber,
       mobileNumber: formData.mobileNumber
     };
-
 
     // Redirect to a new page and pass data
     navigate('/submission-details', { state: { submissionData } });
@@ -161,23 +152,7 @@ const Register = () => {
               />
             </div>
             <div>
-              <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-1">
-                Password
-              </label>
-              <input
-                id="password"
-                name="password"
-                type="password"
-                autoComplete="new-password"
-                required
-                value={formData.password}
-                onChange={handleInputChange}
-                className="appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                placeholder="Create a password"
-              />
-            </div>
-            <div>
-              <label htmlFor="Number" className="block text-sm font-medium text-gray-700 mb-1">
+              <label htmlFor="mobileNumber" className="block text-sm font-medium text-gray-700 mb-1">
                 Mobile Number
               </label>
               <input
@@ -191,7 +166,6 @@ const Register = () => {
                 className="appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                 placeholder="Enter your mobile number"
               />
-
             </div>
           </div>
 
@@ -247,26 +221,6 @@ const Register = () => {
               >
                 <option value="">Select your year</option>
                 {years.map((year) => (
-                  <option key={year} value={year}>
-                    {year}
-                  </option>
-                ))}
-              </select>
-            </div>
-            <div>
-              <label htmlFor="deskNumber" className="block text-sm font-medium text-gray-700 mb-1">
-                Desk Number
-              </label>
-              <select
-                id="deskNumber"
-                name="deskNumber"
-                required
-                value={formData.deskNumber}
-                onChange={handleInputChange}
-                className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
-              >
-                <option value="">Enter Desk Number</option>
-                {deskNumber.map((year) => (
                   <option key={year} value={year}>
                     {year}
                   </option>
