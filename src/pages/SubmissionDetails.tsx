@@ -23,6 +23,7 @@ interface SubmissionData {
   year: string;
   selectedEvents: Event[];
   totalAmount: number;
+  collegeName: string;
 }
 
 const SubmissionDetails: React.FC = () => {
@@ -63,6 +64,7 @@ const SubmissionDetails: React.FC = () => {
     formData.append("name", submissionData.name);
     formData.append("email", submissionData.email);
     formData.append("mobile_no", submissionData.mobileNumber);
+    formData.append("student_id", submissionData.collegeName);
     formData.append("student_id", submissionData.collegeId);
     formData.append("department", submissionData.department);
     formData.append("year", submissionData.year);
@@ -112,6 +114,7 @@ const SubmissionDetails: React.FC = () => {
         {/* College Information */}
         <div>
           <h4 className="font-semibold">College Information</h4>
+          <p>College Name: {submissionData.collegeName}</p>
           <p>College ID: {submissionData.collegeId}</p>
           <p>Department: {submissionData.department}</p>
           <p>Year: {submissionData.year}</p>

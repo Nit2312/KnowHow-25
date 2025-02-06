@@ -11,6 +11,8 @@ interface FormData {
   selectedEvents: string[];
   totalAmount: number;
   mobileNumber: string;
+  collegeName: string;
+  friendId: string;
 }
 
 const Register = () => {
@@ -25,6 +27,8 @@ const Register = () => {
     selectedEvents: [],
     totalAmount: 0,
     mobileNumber: '',
+    collegeName: '',
+    friendId: ''
   });
 
   const events = [
@@ -98,7 +102,8 @@ const Register = () => {
       ...formData,
       selectedEvents: selectedEventDetails,
       totalAmount: calculateTotal(),
-      mobileNumber: formData.mobileNumber
+      mobileNumber: formData.mobileNumber,
+      collegeName: formData.collegeName
     };
 
     // Redirect to a new page and pass data
@@ -172,6 +177,21 @@ const Register = () => {
           {/* College Information */}
           <div className="bg-white p-6 rounded-lg shadow-sm space-y-4">
             <h3 className="text-lg font-medium text-gray-900 mb-4">College Information</h3>
+            <div>
+              <label htmlFor="college-name" className="block text-sm font-medium text-gray-700 mb-1">
+                College Name
+              </label>
+              <input
+                id="college-name"
+                name="collegeName"
+                type="text"
+                required
+                value={formData.collegeName}
+                onChange={handleInputChange}
+                className="appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                placeholder="Enter your college ID"
+              />
+            </div>
             <div>
               <label htmlFor="college-id" className="block text-sm font-medium text-gray-700 mb-1">
                 College ID
