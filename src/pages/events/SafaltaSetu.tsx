@@ -10,9 +10,9 @@ const SafaltaSetu = () => {
     {
       id: 1,
       title: "Yukti Pariksha",
-      date: "March 15, 2024",
+      date: "February 17, 2024",
       Mode: "Online",
-      time: "10:00 AM - 12:00 PM",
+      time: "7.00 Pm - 8:00 PM",
       description: "Aptitude questions in companies test problem-solving, logical reasoning, and math skills, focusing on topics like data structures, algorithms, and quantitative reasoning.",
       requirements: [
         "Laptop or Smartphone with working camera and microphone",
@@ -22,10 +22,10 @@ const SafaltaSetu = () => {
     {
       id: 2,
       title: "Vichar Samvad",
-      date: "March 15, 2024",
+      date: "February 18, 2024",
       Mode: "Offline",
       venue: "A203B, A204, A205, A206",
-      time: "1:00 PM - 2:30 PM",
+      time: "4.00 Pm - 7.00 Pm",
       description: "Design scalable systems and discuss architectural decisions",
       requirements: [
         "Formal dress",
@@ -35,8 +35,8 @@ const SafaltaSetu = () => {
     {
       id: 3,
       title: "Taknik Gyaan",
-      date: "March 15, 2024",
-      time: "3:00 PM - 4:00 PM",
+      date: "February 19, 2024",
+      time: "2.00 Pm - 4.00 pm",
       Mode: "Offline",
       venue: "TPC Cell",
       description: "Behavioral questions and cultural fit assessment",
@@ -48,8 +48,8 @@ const SafaltaSetu = () => {
     {
       id: 4,
       title: "Manav Moolya",
-      date: "March 15, 2024",
-      time: "3:00 PM - 4:00 PM",
+      date: "February 20, 2024",
+      time: " 9.00 Am - 12.30 pm",
       Mode: "Offline",
       venue: "B 405",
       description: "Behavioral questions and cultural fit assessment",
@@ -68,7 +68,7 @@ const SafaltaSetu = () => {
           alt="Logo"
           className="w-24 h-24 object-contain mr-2"
         />
-        <h1 className="text-5xl font-bold text-gray-900 font-custom">KnowHow25</h1>
+        <h1 className="text-5xl font-bold text-gray-900 font-custom">KnowHow'25</h1>
       </div>
       <div className="flex flex-col md:flex-row items-center mb-12 space-y-6 md:space-y-0 md:space-x-6">
         <img
@@ -79,7 +79,8 @@ const SafaltaSetu = () => {
 
         <div>
           <h1 className="text-4xl font-extrabold text-gray-900 mb-2">Safalta Setu</h1>
-          <p className="text-lg text-gray-600">The road to success begin here</p>
+          <p className="text-lg text-gray-600">This event replicates the real-world placement process, equipping students with the skills needed 
+          to excel in professional environments.</p>
         </div>
       </div>
 

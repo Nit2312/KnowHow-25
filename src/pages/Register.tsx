@@ -112,7 +112,7 @@ const Register = () => {
             alt="Logo"
             className="w-24 h-24 object-contain mr-2"
           />
-          <h1 className="text-5xl font-bold text-gray-900 font-custom">KnowHow25</h1>
+          <h1 className="text-5xl font-bold text-gray-900 font-custom">KnowHow'25</h1>
         </div>
         <div>
           <div className="mx-auto flex justify-center">

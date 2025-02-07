@@ -45,7 +45,7 @@ const Team = () => {
           alt="Logo"
           className="w-24 h-24 object-contain mr-2"
         />
-        <h1 className="text-5xl font-bold text-gray-900 font-custom">KnowHow25</h1>
+        <h1 className="text-5xl font-bold text-gray-900 font-custom">KnowHow'25</h1>
       </div>
       <div className="text-center mb-16">
         <h1 className="text-4xl font-bold text-gray-900 mb-4">Meet Our Team</h1>

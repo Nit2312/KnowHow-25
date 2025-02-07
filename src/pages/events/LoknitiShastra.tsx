@@ -11,8 +11,8 @@ const LoknitiShastra = () => {
       id: 1,
       Mode: 'Online',
       title: "Vartaman Dhrishya",
-      date: "March 30, 2024",
-      time: "6:30 PM - 7:00 PM",
+      date: "February 17, 2024",
+      time: "6.30 pm : 7.30 pm",
       description: "The quiz tests knowledge of current affairs, general knowledge, and recent political changes.",
       requirements: [
         "Participants will answer 50 questions.",
@@ -25,8 +25,8 @@ const LoknitiShastra = () => {
       id: 2,
       Mode: "Online",
       title: "Pratik Nirman",
-      date: "March 30, 2024",
-      time: "9:00 PM - 10:00 PM",
+      date: "February 18, 2024",
+      time: "6.00 Am Deadline",
       requirements: [
         "Participants design a logo and slogan reflecting the event's theme.",
         "Designs are judged on originality, appeal, and simplicity.",
@@ -36,9 +36,9 @@ const LoknitiShastra = () => {
     {
       id: 3,
       Mode: "Offline",
-      title: "Samathan Yukti",
-      date: "March 30, 2024",
-      time: "6.00 pm -7.00 PM",
+      title: "Samadhan Yukti",
+      date: "February 19, 2024",
+      time: "5.00 pm : 6.00 pm ",
       Venue: "A-209 & A-210",
       requirements: [
         "Participants respond to real-world situations with practical, accurate solutions.",
@@ -51,8 +51,8 @@ const LoknitiShastra = () => {
       id: 4,
       title: "Loksabha",
       Mode: "Offline",
-      date: "March 30, 2024",
-      time: "4 PM onwards",
+      date: "February 20, 2024",
+      time: "2 PM onwards",
       Venue: "A-224",
       requirements: [
         "Participants are divided into supporters and opposers of a given ministry.",
@@ -71,7 +71,7 @@ const LoknitiShastra = () => {
           alt="Logo"
           className="w-24 h-24 object-contain mr-2"
         />
-        <h1 className="text-5xl font-bold text-gray-900 font-custom">KnowHow25</h1>
+        <h1 className="text-5xl font-bold text-gray-900 font-custom">KnowHow'25</h1>
       </div>
 
 
@@ -82,8 +82,10 @@ const LoknitiShastra = () => {
           className="w-32 h-32 object-contain transition-transform duration-300 transform hover:scale-105"
         />
         <div>
-          <h1 className="text-4xl font-extrabold text-gray-900 mb-2">Lokniti Shastra</h1>
-          <p className="text-lg text-gray-600">Rise, Speak, Lead</p>
+          <h1 className="text-4xl font-extrabold text-gray-900 mb-2 display-flex justify-center">Lokniti Shastra</h1>
+          <p className="text-lg text-gray-600">the Political Arena is an immersive experience that challenges participants to think like leaders,
+            engage in policy-making, and navigate the complexities of governance through debate, strategy, and
+            crisis management. </p>
         </div>
       </div>
 

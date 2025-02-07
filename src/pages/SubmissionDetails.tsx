@@ -101,144 +101,147 @@ const SubmissionDetails: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 py-8 px-4">
-      <div className="block md:hidden flex items-center mb-6 mt-4">
-        <img
-          src="/res/img/KnowHow'25 .png"
-          alt="Logo"
-          className="w-24 h-24 object-contain mr-2"
-        />
-        <h1 className="text-5xl font-bold text-gray-900 font-custom">KnowHow25</h1>
-      </div>
-      <div className="max-w-lg w-full space-y-6 bg-white p-6 rounded-lg shadow-md">
-        <h3 className="text-lg font-semibold text-gray-900 text-center">Form Submission Details</h3>
+    <div className="min-h-[calc(100vh-4rem)] flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-2xl w-full space-y-8">
 
-        {/* Personal Information */}
-        <div>
-          <h4 className="font-semibold">Personal Information</h4>
-          <p>Name: {submissionData.name}</p>
-          <p>Email: {submissionData.email}</p>
-          <p>Mobile Number: {submissionData.mobileNumber}</p>
+        <div className="block md:hidden flex items-center mb-6 mt-4">
+          <img
+            src="/res/img/KnowHow'25 .png"
+            alt="Logo"
+            className="w-24 h-24 object-contain mr-2"
+          />
+          <h1 className="text-5xl font-bold text-gray-900 font-custom">KnowHow'25</h1>
         </div>
+        <div className="max-w-lg w-full space-y-6 bg-white p-6 rounded-lg shadow-md">
+          <h3 className="text-lg font-semibold text-gray-900 text-center">Form Submission Details</h3>
 
-        {/* College Information */}
-        <div>
-          <h4 className="font-semibold">College Information</h4>
-          <p>College Name: {submissionData.collegeName}</p>
-          <p>College ID: {submissionData.collegeId}</p>
-          <p>Department: {submissionData.department}</p>
-          <p>Year: {submissionData.year}</p>
-          <p>Friend ID: {submissionData.friendId}</p>
-        </div>
-
-        {/* Selected Events */}
-        <div>
-          <h4 className="font-semibold">Selected Events</h4>
-          {submissionData.selectedEvents.length > 0 ? (
-            <ul className="list-disc pl-4">
-              {submissionData.selectedEvents.map((event, idx) => (
-                <li key={idx}>
-                  {event.name}: ₹{event.price}
-                </li>
-              ))}
-            </ul>
-          ) : (
-            <p>No events selected.</p>
-          )}
-        </div>
-
-        {/* Image Section */}
-        {imageUrl && (
-          <div className="flex justify-center">
-            <img
-              src={imageUrl}
-              alt="Event Certificate"
-              className="w-40 h-40 object-cover rounded-lg shadow-sm"
-              loading="lazy"
-            />
-          </div>
-        )}
-
-        {/* Payment Method, Transaction ID, and Receipt Upload */}
-        <div>
-          <h4 className="font-semibold">Payment Details</h4>
+          {/* Personal Information */}
           <div>
-            <label htmlFor="paymentMethod" className="block">Payment Method</label>
-            <select
-              id="paymentMethod"
-              value={paymentMethod}
-              onChange={(e) => setPaymentMethod(e.target.value)}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md"
-            >
-              <option value="">Select Payment Method</option>
-              <option value="online">Online</option>
-              <option value="cash">Cash</option>
-            </select>
+            <h4 className="font-semibold">Personal Information</h4>
+            <p>Name: {submissionData.name}</p>
+            <p>Email: {submissionData.email}</p>
+            <p>Mobile Number: {submissionData.mobileNumber}</p>
           </div>
 
-          {paymentMethod === "online" && (
-            <>
-              <div>
-                <label htmlFor="transactionId" className="block">Transaction ID</label>
-                <input
-                  type="text"
-                  id="transactionId"
-                  value={transactionId}
-                  onChange={(e) => setTransactionId(e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md"
-                />
-              </div>
+          {/* College Information */}
+          <div>
+            <h4 className="font-semibold">College Information</h4>
+            <p>College Name: {submissionData.collegeName}</p>
+            <p>College ID: {submissionData.collegeId}</p>
+            <p>Department: {submissionData.department}</p>
+            <p>Year: {submissionData.year}</p>
+            <p>Friend ID: {submissionData.friendId}</p>
+          </div>
 
-              <div>
-                <label htmlFor="receipt" className="block">Upload Payment Receipt</label>
-                <input
-                  type="file"
-                  id="receipt"
-                  accept="image/*"
-                  onChange={handleFileChange}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md"
-                />
-              </div>
-            </>
-          )}
+          {/* Selected Events */}
+          <div>
+            <h4 className="font-semibold">Selected Events</h4>
+            {submissionData.selectedEvents.length > 0 ? (
+              <ul className="list-disc pl-4">
+                {submissionData.selectedEvents.map((event, idx) => (
+                  <li key={idx}>
+                    {event.name}: ₹{event.price}
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p>No events selected.</p>
+            )}
+          </div>
 
-          {paymentMethod === "cash" && (
-            <div className="text-sm text-gray-500">
-
+          {/* Image Section */}
+          {imageUrl && (
+            <div className="flex justify-center">
+              <img
+                src={imageUrl}
+                alt="Event Certificate"
+                className="w-40 h-40 object-cover rounded-lg shadow-sm"
+                loading="lazy"
+              />
             </div>
           )}
 
+          {/* Payment Method, Transaction ID, and Receipt Upload */}
           <div>
-            <label htmlFor="deskCode" className="block">Desk Code</label>
-            <input
-              type="text"
-              id="deskCode"
-              value={deskCode}
-              onChange={(e) => setDeskCode(e.target.value)}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md"
-            />
+            <h4 className="font-semibold">Payment Details</h4>
+            <div>
+              <label htmlFor="paymentMethod" className="block">Payment Method</label>
+              <select
+                id="paymentMethod"
+                value={paymentMethod}
+                onChange={(e) => setPaymentMethod(e.target.value)}
+                className="w-full px-3 py-2 border border-gray-300 rounded-md"
+              >
+                <option value="">Select Payment Method</option>
+                <option value="online">Online</option>
+                <option value="cash">Cash</option>
+              </select>
+            </div>
+
+            {paymentMethod === "online" && (
+              <>
+                <div>
+                  <label htmlFor="transactionId" className="block">Transaction ID</label>
+                  <input
+                    type="text"
+                    id="transactionId"
+                    value={transactionId}
+                    onChange={(e) => setTransactionId(e.target.value)}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="receipt" className="block">Upload Payment Receipt</label>
+                  <input
+                    type="file"
+                    id="receipt"
+                    accept="image/*"
+                    onChange={handleFileChange}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md"
+                  />
+                </div>
+              </>
+            )}
+
+            {paymentMethod === "cash" && (
+              <div className="text-sm text-gray-500">
+
+              </div>
+            )}
+
+            <div>
+              <label htmlFor="deskCode" className="block">Desk Code</label>
+              <input
+                type="text"
+                id="deskCode"
+                value={deskCode}
+                onChange={(e) => setDeskCode(e.target.value)}
+                className="w-full px-3 py-2 border border-gray-300 rounded-md"
+              />
+            </div>
           </div>
-        </div>
 
-        {/* Total Amount */}
-        <div>
-          <h4 className="font-semibold">Total Amount</h4>
-          <p>₹{submissionData.totalAmount.toFixed(2)}</p>
-        </div>
+          {/* Total Amount */}
+          <div>
+            <h4 className="font-semibold">Total Amount</h4>
+            <p>₹{submissionData.totalAmount.toFixed(2)}</p>
+          </div>
 
-        {/* Submit Button */}
-        <div className="flex justify-center">
-          <button
-            onClick={handleSubmit}
-            className="bg-blue-500 text-white px-6 py-2 rounded-md"
-            disabled={isLoading} // Disable the button while loading
-          >
-            {isLoading ? 'Submitting...' : 'Submit'}
-          </button>
-        </div>
+          {/* Submit Button */}
+          <div className="flex justify-center">
+            <button
+              onClick={handleSubmit}
+              className="bg-blue-500 text-white px-6 py-2 rounded-md"
+              disabled={isLoading} // Disable the button while loading
+            >
+              {isLoading ? 'Submitting...' : 'Submit'}
+            </button>
+          </div>
 
-        {/* Show Loading Spinner */}
-        {isLoading && <LoadingSpinner />}
+          {/* Show Loading Spinner */}
+          {isLoading && <LoadingSpinner />}
+        </div>
       </div>
     </div>
   );

@@ -10,8 +10,8 @@ const VikasPath = () => {
     {
       id: 1,
       title: "Vichar Prastav",
-      date: "March 20, 2024",
-      time: "2:00 PM - 3:00 PM",
+      date: "February 18, 2024",
+      time: "6 PM DeadLine",
       description: "Learn the essential components of a professional resume",
       topics: [
         "Understanding resume sections",
@@ -23,8 +23,8 @@ const VikasPath = () => {
     {
       id: 2,
       title: "Vigyan Sankalp",
-      date: "March 20, 2024",
-      time: "3:15 PM - 4:00 PM",
+      date: "February 19, 2024",
+      time: "6 PM Deadline",
       description: "Make your resume ATS-friendly and increase visibility",
       topics: [
         "Understanding ATS systems",
@@ -36,8 +36,8 @@ const VikasPath = () => {
     {
       id: 3,
       title: "Vyapar Sabha",
-      date: "March 20, 2024",
-      time: "4:15 PM - 5:00 PM",
+      date: "February 21, 2024",
+      time: "10:00 Am - 1:00 pm",
       description: "One-on-one resume review with industry professionals",
       topics: [
         "Individual feedback sessions",
@@ -56,7 +56,7 @@ const VikasPath = () => {
           alt="Logo"
           className="w-24 h-24 object-contain mr-2"
         />
-        <h1 className="text-5xl font-bold text-gray-900 font-custom">KnowHow25</h1>
+        <h1 className="text-5xl font-bold text-gray-900 font-custom">KnowHow'25</h1>
       </div>
       {/* Header Section */}
       <div className="flex flex-col md:flex-row items-center mb-12 space-y-6 md:space-y-0 md:space-x-6">
@@ -68,7 +68,8 @@ const VikasPath = () => {
 
         <div>
           <h1 className="text-4xl font-extrabold text-gray-900 mb-2">Vikas Path</h1>
-          <p className="text-lg text-gray-600">Craft a compelling resume that gets you noticed</p>
+          <p className="text-lg text-gray-600">It encourages students to think like entrepreneurs and solve real-world problems. it fosters
+            innovation and prepares participants for professional success.</p>
         </div>
       </div>
 

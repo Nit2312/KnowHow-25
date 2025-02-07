@@ -11,8 +11,8 @@ const SamjhautaKendra = () => {
       id: 1,
       Mode: "Online",
       title: "Nivesh Soch",
-      date: "March 25, 2024",
-      time: "1:00 PM - 2:30 PM",
+      date: "February 17, 2024",
+      time: "9:00 pm : 9:30 pm",
       description: "Industry leaders discuss current and future tech trends.",
       requirements: [
         "Laptop or Smartphone with internet access.",
@@ -24,8 +24,8 @@ const SamjhautaKendra = () => {
       id: 2,
       Mode: "Online",
       title: "Kalam Ki Takat",
-      date: "March 25, 2024",
-      time: "3:00 PM - 4:30 PM",
+      date: "February 18, 2024",
+      time: "9:00 pm DeadLine",
       description: "It is an online event where participants submit professional emails, evaluated on structure, clarity, and persuasion skills.",
       requirements: [
         "Laptop or Smartphone with internet access.",
@@ -39,8 +39,8 @@ const SamjhautaKendra = () => {
       title: "Charchaa Chakra",
       Mode: "Offline",
       venue: "A201",
-      date: "March 25, 2024",
-      time: "3:15 PM onwards",
+      date: "February 19, 2024",
+      time: "4:00 pm - 7:00 pm",
       description: "An offline event where students engage in a budget allocation discussion.",
       requirements: [
         "Basic knowledge of cutting-edge tech.",
@@ -52,10 +52,10 @@ const SamjhautaKendra = () => {
     {
       id: 4,
       title: "Surprise Round",
-      date: "March 25, 2024",
+      date: "February 21, 2024",
       Mode: "Offline",
       venue: "TPC Cell",
-      time: "9:30 AM onwards",
+      time: "11:00 am - 1:00 pm",
       description: "A surprise round with details available on the event day.",
       requirements: [
         "Curiosity about new technologies.",
@@ -74,7 +74,7 @@ const SamjhautaKendra = () => {
           alt="Logo"
           className="w-24 h-24 object-contain mr-2"
         />
-        <h1 className="text-5xl font-bold text-gray-900 font-custom">KnowHow25</h1>
+        <h1 className="text-5xl font-bold text-gray-900 font-custom">KnowHow'25</h1>
       </div>
 
       <div className="flex flex-col md:flex-row items-center mb-12 space-y-6 md:space-y-0 md:space-x-6">
@@ -86,7 +86,9 @@ const SamjhautaKendra = () => {
 
         <div>
           <h1 className="text-4xl font-extrabold text-gray-900 mb-2">Samjhauta Kendra</h1>
-          <p className="text-lg text-gray-600">Learn from industry leaders and gain valuable insights</p>
+          <p className="text-lg text-gray-600">It is a dynamic negotiation-based event where participants engage in strategic discussions, budget
+            allocations, and crisis management. Through multiple rounds, they showcase their decision-making,
+            persuasion, and problem-solving skills in a high-stakes corporate setting.</p>
         </div>
       </div>
 
